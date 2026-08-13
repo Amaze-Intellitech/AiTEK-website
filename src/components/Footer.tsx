@@ -1,0 +1,89 @@
+import Link from "next/link";
+import Image from "next/image";
+import Container from "./ui/Container";
+import { footerNav } from "@/content/nav";
+import { social } from "@/content/social";
+import { IconLinkedIn } from "./ui/icons";
+
+export default function Footer() {
+  return (
+    <footer className="border-t border-border bg-surface">
+      <Container className="py-14">
+        <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
+          <div className="col-span-2 sm:col-span-1">
+            <div className="flex items-center gap-2">
+              <Image src="/images/aitek-logo.png" alt="" width={24} height={24} className="h-6 w-6" />
+              <span className="text-lg font-bold tracking-tight text-foreground">AITEK</span>
+            </div>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              Architecting the Autonomous Enterprise.
+            </p>
+            <div className="mt-4">
+              {social.linkedin ? (
+                <a
+                  href={social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="AITEK on LinkedIn"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-primary hover:text-primary"
+                >
+                  <IconLinkedIn className="h-4 w-4" />
+                </a>
+              ) : (
+                <span
+                  aria-label="LinkedIn page coming soon"
+                  title="LinkedIn page coming soon"
+                  className="inline-flex h-8 w-8 cursor-not-allowed items-center justify-center rounded-full border border-border text-muted"
+                >
+                  <IconLinkedIn className="h-4 w-4" />
+                </span>
+              )}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-foreground">Industries</p>
+            <ul className="mt-3 space-y-2">
+              {footerNav.industries.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-sm text-muted hover:text-primary">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-foreground">Company</p>
+            <ul className="mt-3 space-y-2">
+              {footerNav.company.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-sm text-muted hover:text-primary">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-foreground">Get in Touch</p>
+            <ul className="mt-3 space-y-2 text-sm text-muted">
+              <li>AITEK, Hyderabad</li>
+              <li>
+                <a href="mailto:info@aitek.in" className="hover:text-primary">
+                  info@aitek.in
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 border-t border-border pt-6 text-xs text-muted">
+          <p>&copy; {new Date().getFullYear()} AITEK. All rights reserved.</p>
+        </div>
+      </Container>
+    </footer>
+  );
+}
