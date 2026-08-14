@@ -63,6 +63,12 @@ export const leadership = {
       linkedin: "",
     },
     {
+      name: "Naga Ravi Shankar",
+      title: "Chief Operating Officer",
+      bio: "Drives AITEK's operational excellence and delivery governance, ensuring every engagement runs with the discipline and consistency clients expect.",
+      linkedin: "",
+    },
+    {
       name: "Chitti Jaya Chandra Shekhar",
       title: "Chief Strategy Officer",
       bio: "Shapes AITEK's transformation frameworks and go-to-market strategy, aligning digital investments with measurable business outcomes.",

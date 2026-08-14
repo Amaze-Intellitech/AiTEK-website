@@ -1,4 +1,5 @@
 import type { Industry } from "./types";
+import { verticalCapabilityLayers } from "./detailedSolutions";
 
 export const industriesOverview = {
   heading: "Engineering Intelligent Enterprises Across Complex Industries",
@@ -60,6 +61,10 @@ export const industries: Industry[] = [
         "Computer Vision quality inspection systems",
         "S&OP and Integrated Business Planning (IBP) platforms",
       ],
+      detailScope: {
+        heading: "Detailed Manufacturing Solutions",
+        groups: verticalCapabilityLayers.manufacturing,
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Transitioning your factory floor delivers sustainable improvements in OEE, significantly reduces unplanned downtime, and lowers inventory carrying costs.",
@@ -84,6 +89,10 @@ export const industries: Industry[] = [
         "Predictive Refinery Health Index (RHI) scoring",
         "Semi-autonomous APC setpoint adjustments to maintain safety envelopes",
       ],
+      detailScope: {
+        heading: "Detailed Downstream Solutions",
+        groups: verticalCapabilityLayers["oil-gas"],
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Operators achieve higher asset utilization, minimized environmental exposure, and accelerated audit readiness while shifting human roles to strategic supervision.",
@@ -108,6 +117,10 @@ export const industries: Industry[] = [
         "Behavioral and network fraud risk analytics",
         "Omnichannel customer virtual assistants for instant policy servicing",
       ],
+      detailScope: {
+        heading: "Detailed Insurance Solutions",
+        groups: verticalCapabilityLayers.insurance,
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Transitioning your operations delivers significant reductions in claims processing times, underwriting cycle times, and overall operational costs.",
@@ -132,6 +145,10 @@ export const industries: Industry[] = [
         "Hospital Operations Intelligence for optimized bed and OR scheduling",
         "Revenue Cycle Intelligence to automate coding, billing, and denial management",
       ],
+      detailScope: {
+        heading: "Detailed Healthcare Solutions",
+        groups: verticalCapabilityLayers.healthcare,
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Providers and payers achieve faster claims processing, reduced hospital readmission rates, and optimized facility throughput.",
@@ -156,6 +173,10 @@ export const industries: Industry[] = [
         "GMP compliance analytics and CAPA (Corrective and Preventive Action) intelligence",
         "Generative regulatory copilots for automated document submissions",
       ],
+      detailScope: {
+        heading: "Detailed Pharmaceutical Solutions",
+        groups: verticalCapabilityLayers.pharmaceuticals,
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Pharmaceutical leaders realize faster clinical trial timelines, guaranteed batch consistency, and perfect compliance across global temperature-tracked distribution networks.",

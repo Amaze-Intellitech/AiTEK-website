@@ -26,6 +26,26 @@ export const solutions: HookPage[] = [
       "Anomalies and fraud risk scoring engines",
       "Constraint-based process parameter optimization algorithms",
     ],
+    detailScope: {
+      heading: "Detailed Solution Scope",
+      groups: [
+        {
+          title: "Algorithms & Models",
+          description:
+            "Supervised learning (regressions, random forests, XGBoost), unsupervised (k-means, PCA, DBSCAN), and Neural Networks (CNNs, LSTMs, GRUs).",
+        },
+        {
+          title: "Predictive Frameworks",
+          description:
+            "Time-series forecasting (ARIMA, SARIMA, ETS), deep learning (LSTM, GRU, TCN), probabilistic (Prophet, DeepAR), and reinforcement learning for process controls.",
+        },
+        {
+          title: "Optimization Engine",
+          description:
+            "Multi-agent reinforcement learning, constraint-based optimization, and network simulation models.",
+        },
+      ],
+    },
     businessImpactHeading: "Business Impact",
     businessImpact:
       "Enterprises shift from historical analysis to real-time foresight, gaining a strategic operational window to proactively reduce cost and capture revenue.",
@@ -46,6 +66,76 @@ export const solutions: HookPage[] = [
       "Enterprise tool and API integration for autonomous execution",
       "Secure human-in-the-loop escalation paths and guardrails",
     ],
+    detailScope: {
+      heading: "Detailed AI Agent Catalog",
+      groups: [
+        {
+          title: "Demand Planning Agents",
+          items: [
+            "Demand Forecasting Agent",
+            "Market Trend Analysis Agent",
+            "Price Elasticity Agent",
+            "Customer Behaviour Prediction Agent",
+            "New Product Forecasting Agent",
+          ],
+        },
+        {
+          title: "Inventory & Warehouse Agents",
+          items: [
+            "Inventory Optimization Agent",
+            "Reorder Point (ROP) Agent",
+            "Safety Stock Calculation Agent",
+            "Warehouse Slotting Agent",
+            "Cycle Counting Agent",
+            "Warehouse Robotics Coordination Agent",
+          ],
+        },
+        {
+          title: "Production & Manufacturing Agents",
+          items: [
+            "Production Scheduling Agent",
+            "Capacity Planning Agent",
+            "Quality Inspection Agent (Vision AI)",
+            "Predictive Maintenance Agent",
+            "Machine Health Monitoring Agent",
+            "Energy Optimization Agent",
+            "Digital Twin Simulation Agent",
+          ],
+        },
+        {
+          title: "Logistics & Transport Agents",
+          items: [
+            "Route Optimization Agent",
+            "Fleet Management Agent",
+            "Carrier Selection Agent",
+            "Freight Cost Optimization Agent",
+            "Shipment Tracking & ETA Prediction Agent",
+          ],
+        },
+        {
+          title: "Procurement & Supplier Agents",
+          items: [
+            "Supplier Risk Assessment Agent",
+            "Procurement Automation Agent",
+            "Spend Analytics Agent",
+            "Supplier Performance Monitoring Agent",
+            "Contract Intelligence Agent",
+            "RFQ/RFP Automation Agent",
+            "Negotiation Support Agent",
+          ],
+        },
+        {
+          title: "Operations & Process Automation Agents",
+          items: [
+            "Order Processing Agent",
+            "Invoice Matching Agent",
+            "Returns & Reverse Logistics Agent",
+            "Document Understanding Agent",
+            "Compliance & Audit Agent",
+          ],
+        },
+      ],
+    },
     businessImpactHeading: "Business Impact",
     businessImpact:
       "We transition your talent from tedious execution to exception management, boosting operational speed and safety across 24/7 business pipelines.",
@@ -66,6 +156,31 @@ export const solutions: HookPage[] = [
       "Enterprise-grade security, logging, and performance auditing",
       "Human-AI collaboration protocols and permission boundaries",
     ],
+    detailScope: {
+      heading: "Detailed Framework Orchestration Model",
+      groups: [
+        {
+          title: "Multi-Agent Coordination (MAS)",
+          description:
+            "Architectures utilizing shared blackboard models, multi-agent reinforcement learning, and deterministic communication protocols to solve functional conflicts (e.g., balancing the Production Agent's throughput maximization with the Energy Agent's power usage limitations).",
+        },
+        {
+          title: "Agentic Decision Lifecycle (ADLC)",
+          description:
+            "Closed-loop system that continuously manages the Goal → Perceive → Reason → Plan → Execute → Learn paradigm without manual step triggers.",
+        },
+        {
+          title: "E2E Supply Planning Orchestration",
+          items: [
+            "S&OP Agent",
+            "IBP Agent",
+            "Scenario Planning Agent",
+            "Constraint-Based Optimization Agent",
+            "Risk & Disruption Prediction Agent",
+          ],
+        },
+      ],
+    },
     businessImpactHeading: "Business Impact",
     businessImpact:
       "Organizations automate complex, end-to-end workflows safely, achieving continuous optimization across finance, supply chain, and operations.",
@@ -86,6 +201,26 @@ export const solutions: HookPage[] = [
       "Enterprise RAG Platforms with secure vector databases and knowledge graphs",
       "Real-time agent observability, performance, and boundary tracking",
     ],
+    detailScope: {
+      heading: "Detailed Tooling Stack",
+      groups: [
+        {
+          title: "Joule Studio",
+          description:
+            "Rapid, pro-code and low-code development environment specifically integrated into SAP BTP to build, test, and deploy customized sub-agents.",
+        },
+        {
+          title: "SAP AI Agent Hub",
+          description:
+            "A central IT control panel built on LeanIX, allowing complete lifecycle discovery, performance monitoring, registration, and auditing of all deployed digital workers.",
+        },
+        {
+          title: "Enterprise RAG Platforms",
+          description:
+            "Hybrid vector databases (such as FAISS, Milvus, or Pinecone) and knowledge graph reasoning tools that safely expose unstructured operational files to LLMs without fine-tuning risks.",
+        },
+      ],
+    },
     businessImpactHeading: "Business Impact",
     businessImpact:
       "Technology teams rapidly build, test, and deploy compliant, hallucination-free AI agents, cutting time-to-production from months to weeks.",

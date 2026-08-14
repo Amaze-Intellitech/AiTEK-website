@@ -1,42 +1,60 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
-import Hero from "@/components/ui/Hero";
-import Card from "@/components/ui/Card";
-import { functionsCategory } from "@/content/expertise";
+import PhotoHero from "@/components/ui/PhotoHero";
+import HookPageBody from "@/components/ui/HookPageBody";
+import CTABand from "@/components/ui/CTABand";
+import Button from "@/components/ui/Button";
+import { functionsCategory, getCategoryPage } from "@/content/expertise";
+import { functionImages } from "@/content/images";
 
-export const metadata: Metadata = {
-  title: "Specific Functions",
-  description: functionsCategory.intro,
-};
+export function generateStaticParams() {
+  return functionsCategory.pages.map((p) => ({ slug: p.slug }));
+}
 
-export default function FunctionsCategoryPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getCategoryPage("functions", slug);
+  if (!page) return {};
+  return {
+    title: page.tagline ?? page.pageTitle,
+    description: page.hook,
+  };
+}
+
+export default async function FunctionDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const page = getCategoryPage("functions", slug);
+  if (!page) notFound();
+
   return (
     <>
-      <Hero eyebrow="Expertise" heading={functionsCategory.name} paragraphs={[functionsCategory.intro ?? ""]} />
+      <PhotoHero
+        eyebrow="Specific Functions"
+        heading={page.pageTitle}
+        paragraphs={[page.tagline ?? ""]}
+        image={functionImages[page.slug]}
+      />
 
       <section className="py-16 sm:py-20">
         <Container>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {functionsCategory.pages.map((page) => (
-              <Link key={page.slug} href={`/expertise/functions/${page.slug}`} className="group">
-                <Card className="h-full">
-                  <h3 className="text-lg font-semibold text-foreground group-hover:text-primary">
-                    {page.tagline ?? page.pageTitle}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">{page.hook}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
-                    Read more
-                    <svg viewBox="0 0 12 12" className="h-3 w-3" fill="none" aria-hidden>
-                      <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                </Card>
-              </Link>
-            ))}
-          </div>
+          <HookPageBody page={page} />
         </Container>
       </section>
+
+      <CTABand
+        heading="Explore the rest of Specific Functions"
+        text="Intelligent Factory, Supply Chain Management, Manufacturing Excellence, Smart Operations, Digital Twins, and SAP."
+        cta={<Button href="/expertise/functions">View Specific Functions</Button>}
+      />
     </>
   );
 }

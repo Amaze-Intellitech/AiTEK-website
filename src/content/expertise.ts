@@ -1,4 +1,5 @@
 import type { Category, HookPage } from "./types";
+import { verticalCapabilityLayers } from "./detailedSolutions";
 
 export const expertiseIntro = {
   heading: "Engineering Business Transformation Through Strategy, Intelligence, and Technology",
@@ -140,6 +141,10 @@ export const domainCategory: Category = {
         "Agentic AI: Autonomous Maintenance and Procurement Agents",
         "Centralized Multi-Agent Manufacturing Orchestrator",
       ],
+      detailScope: {
+        heading: "Detailed Domain Solutions",
+        groups: verticalCapabilityLayers.manufacturing,
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Aligning shop-floor execution with business ambition delivers substantial improvements in OEE, significant downtime reductions, and optimized inventory carrying costs.",
@@ -160,6 +165,10 @@ export const domainCategory: Category = {
         "Generative HSE, Operations, and Maintenance Copilots",
         "Autonomous Production Planning and Safety Compliance Agents",
       ],
+      detailScope: {
+        heading: "Detailed Domain Solutions",
+        groups: verticalCapabilityLayers["oil-gas"],
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Refineries reduce unplanned shutdowns and improve safety performance, maximizing gross margins while keeping compliance automated.",
@@ -180,6 +189,10 @@ export const domainCategory: Category = {
         "Autonomous Underwriting, Claims, and Fraud agents",
         "Centralized Multi-Agent Insurance Operations Orchestrator",
       ],
+      detailScope: {
+        heading: "Detailed Domain Solutions",
+        groups: verticalCapabilityLayers.insurance,
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Insurers achieve massive reductions in claims processing times, improved underwriting cycle times, and significantly lowered operational costs.",
@@ -200,6 +213,10 @@ export const domainCategory: Category = {
         "Generative Clinical, Care Management, and Claims Copilots",
         "Patient Engagement and Clinical Workflow agents",
       ],
+      detailScope: {
+        heading: "Detailed Domain Solutions",
+        groups: verticalCapabilityLayers.healthcare,
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Providers optimize resource utilization and accelerate revenue cycle realization, while payers achieve faster, more accurate claims adjudication.",
@@ -220,6 +237,10 @@ export const domainCategory: Category = {
         "Autonomous Manufacturing, Quality, and Regulatory Affairs Agents",
         "Supply Chain & Cold Chain Logistics Agents with real-time tracking",
       ],
+      detailScope: {
+        heading: "Detailed Domain Solutions",
+        groups: verticalCapabilityLayers.pharmaceuticals,
+      },
       businessImpactHeading: "Business Impact",
       businessImpact:
         "Pharmaceutical leaders realize faster clinical trial timelines, guaranteed batch consistency, and perfect compliance across global temperature-tracked distribution networks.",

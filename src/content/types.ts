@@ -1,3 +1,14 @@
+export interface DetailGroup {
+  title: string;
+  description?: string;
+  items?: string[];
+}
+
+export interface DetailScope {
+  heading: string;
+  groups: DetailGroup[];
+}
+
 export interface HookPage {
   slug: string;
   pageTitle: string;
@@ -6,6 +17,7 @@ export interface HookPage {
   solution: string[];
   capabilitiesHeading: string;
   capabilities: string[];
+  detailScope?: DetailScope;
   businessImpactHeading?: string;
   businessImpact: string;
 }

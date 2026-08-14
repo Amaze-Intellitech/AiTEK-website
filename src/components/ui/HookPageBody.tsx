@@ -1,5 +1,6 @@
 import Card from "./Card";
 import CheckList from "./CheckList";
+import DetailScopeSection from "./DetailScopeSection";
 import Reveal from "./Reveal";
 import type { HookPage } from "@/content/types";
 
@@ -26,6 +27,8 @@ export default function HookPageBody({ page }: { page: HookPage }) {
           ))}
         </div>
       </div>
+
+      {page.detailScope && <DetailScopeSection scope={page.detailScope} />}
 
       <div>
         <h3 className="text-xl font-semibold text-foreground">{page.businessImpactHeading ?? "Business Impact"}</h3>
