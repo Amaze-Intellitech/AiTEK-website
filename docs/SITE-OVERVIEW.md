@@ -17,7 +17,7 @@ The homepage exists to make one argument before anything else: most digital tran
 | **70%** | of digital initiatives fail to deliver expected value — the site's central hook |
 | **3** | pillars of Digital Business Engineering: Strategy, Architecture, Engineering |
 | **4** | core service pillars: Consulting, AI Products, MDPs, SAP BTP |
-| **6** | global locations, HQ'd in Hyderabad |
+| **7** | global locations, HQ'd in Hyderabad |
 
 The shift the homepage argues for:
 
@@ -30,7 +30,7 @@ The shift the homepage argues for:
 
 ### Content architecture: what visitors can explore
 
-Everything below the pitch is organized around one repeating structure: five industry verticals, each addressed from two angles — the business problem (Industries) and the technical answer (Solutions).
+Everything below the pitch pairs a vertical view with a capability view: five industry verticals (Industries) each state the business problem, while four capability layers (Solutions) — AI & Machine Learning, AI Agents, the Agentic Framework, and Tools — state the technical answer, with every layer's page addressing all five verticals internally.
 
 | Industry | ML & Predictive Intelligence | Generative AI | Agentic AI & Autonomous Ops |
 |---|---|---|---|
@@ -40,19 +40,16 @@ Everything below the pitch is organized around one repeating structure: five ind
 | Healthcare | Clinical & operational analytics | Clinician & patient copilots | Autonomous care-coordination agents |
 | Pharmaceuticals | R&D & supply chain analytics | Research & regulatory copilots | Autonomous trial & supply agents |
 
-**Expertise areas** (the capability-first view — a ninth, cross-cutting page for visitors who think in capabilities rather than industries):
+**Expertise** (the capability-first view — for visitors who think in capabilities rather than industries) is a `/expertise` index into three categories, each with its own set of detail pages, plus one standalone page:
 
-- Enterprise Strategy & Business Transformation
-- Digital Business Engineering
-- Enterprise Architecture
-- AI & Machine Learning
-- Generative AI
-- Agentic AI & Multi-Agent Systems
-- Data Engineering & Intelligence Platforms
-- Intelligent Automation
-- SAP Business AI & Enterprise Platforms
+- **AI for Enterprise** — a standalone page (`/expertise/ai-for-enterprise`) on the shift from reactive GenAI to autonomous, agentic execution.
+- **Consulting** (`/expertise/consulting`) — Business Process, Management, IT, and Digital & AI Transformation consulting.
+- **Domain** (`/expertise/domain`) — the same five industry verticals as above (Manufacturing, Oil & Gas, Insurance, Healthcare, Pharmaceuticals), addressed from a domain-expertise angle rather than a challenges/solutions one.
+- **Functions** (`/expertise/functions`) — Intelligent Factory, Supply Chain Management, Manufacturing Excellence, Smart Operations, Digital Twins, and SAP.
 
-**About** — Vision, mission, a five-person leadership roster led by Dr. Hanumanth Rao (Managing Director) and Vijay Kumar (CEO), and the global-presence footprint.
+**Digital Business Engineering** — a standalone page at `/digital-business-engineering`, elevated from a homepage section into its own top-level nav item ("DBE"), covering AITEK's key offerings, transformation lifecycle, and business impact.
+
+**About** — Vision, mission, a four-person leadership roster led by Dr. Hanumanth Rao (Managing Director) and Vijay Kumar (CEO), and the global-presence footprint.
 
 **Contact** — HQ in Hyderabad, a work-email intake form, and — as of this update — a tab to book a call instead of writing one.
 
@@ -73,9 +70,9 @@ The site is hand-built rather than assembled from a UI kit, with a deliberately 
 | **Framework** | Next.js 16 (App Router), React 19, TypeScript — every industry/solution detail page statically generated via `generateStaticParams`. |
 | **Styling** | Tailwind CSS v4, CSS-first theming: eight OKLCH custom properties in `globals.css`, mapped into Tailwind via `@theme inline` — no `tailwind.config.js`. |
 | **Content model** | Typed content objects under `src/content/*.ts` (industries, solutions, expertise, about, home…), consumed by thin page components under `src/app`. Copy changes never touch layout code. |
-| **Components** | No UI kit — a hand-built primitive set, reused everywhere rather than styled ad hoc per page: `Button`, `Card`, `Hero`, `PhotoHero`, `SectionHeading`, `CTABand`, `StatCallout`, `NumberedStep`, `CheckList`, `ChipCloud`, `FramedImage`, `VerticalTabs`, `Reveal`, `BookingWidget`. |
+| **Components** | No UI kit — a hand-built primitive set, reused everywhere rather than styled ad hoc per page: `Button`, `Card`, `Container`, `Hero`, `PhotoHero`, `SectionHeading`, `CTABand`, `StatCallout`, `NumberedStep`, `CheckList`, `ChipCloud`, `FramedImage`, `HookPageBody`, `DetailScopeSection`, `OptionGrid`, `FormField`, `LeadershipCard`, `LocationBadges`, `Reveal`, `BookingWidget`. |
 | **Dependencies** | Deliberately minimal: `next`, `react`, `react-dom`, plus `framer-motion` — added for exactly one job (scroll reveals) rather than pulled in as a general animation layer. |
-| **Typography** | Urbanist for headings, Epilogue for body. |
+| **Typography** | Urbanist for headings, Inter for body, Geist Mono for code/monospace. |
 
 ### What changed in this update
 
@@ -97,9 +94,17 @@ Two workstreams, both reusing existing primitives and content rather than introd
 | `/` | Homepage — the pitch, the pillars, industry grid, get-started promo |
 | `/industries` | Vertical index |
 | `/industries/[slug]` | ×5 — business challenges, capabilities, outcomes |
-| `/solutions` | Vertical index |
-| `/solutions/[slug]` | ×5 — the 3-layer AI capability breakdown |
-| `/expertise` | Nine capability areas, one scroll page |
+| `/solutions` | Capability-layer index |
+| `/solutions/[slug]` | ×4 — AI/ML, AI Agents, Agentic Framework, Tools, each covering all 5 verticals |
+| `/expertise` | Category index (Consulting, Domain, Functions, AI for Enterprise) |
+| `/expertise/ai-for-enterprise` | Standalone page — reactive GenAI vs. autonomous agentic execution |
+| `/expertise/consulting` | Category index |
+| `/expertise/consulting/[slug]` | ×4 — Business Process, Management, IT, Digital & AI Transformation |
+| `/expertise/domain` | Category index |
+| `/expertise/domain/[slug]` | ×5 — Manufacturing, Oil & Gas, Insurance, Healthcare, Pharmaceuticals |
+| `/expertise/functions` | Category index |
+| `/expertise/functions/[slug]` | ×6 — Intelligent Factory, Supply Chain Management, Manufacturing Excellence, Smart Operations, Digital Twins, SAP |
+| `/digital-business-engineering` | Standalone DBE page — offerings, transformation lifecycle, business impact |
 | `/about` | Vision, mission, leadership, global presence |
 | `/contact` | Form / Book a Call tabs |
 | `/book` | New — dedicated scheduling entry point |
