@@ -121,25 +121,26 @@ export const consultingCategory: Category = {
 
 export const domainCategory: Category = {
   slug: "domain",
-  name: "Domain/Functions",
+  name: "Domain",
   intro:
     "Vertical-specific cognitive layers — predictive, generative, and agentic — tuned to the operational realities of each industry we serve.",
   pages: [
     {
       slug: "manufacturing",
-      pageTitle: "Specialized Manufacturing AI Capability Layers",
+      pageTitle: "Agentic Manufacturing: Planning, Production, and Supply Chain as One",
       tagline: "Manufacturing",
-      hook: "Manufacturers struggle to balance production throughput, product quality, and energy costs. Fragmented software tools fail to share context, leaving planners to manually resolve critical shop floor conflicts.",
+      hook: "Traditional manufacturing operates in silos — planning, production, and supply chain rarely share context in real time. Fragmented tools leave planners manually resolving conflicts, driving up inventory costs, downtime, and missed delivery commitments.",
       solution: [
-        "AITEK deploys vertical-specific cognitive layers across predictive, generative, and agentic capabilities. By connecting machines, materials, and enterprise applications, our systems continuously optimize parameters and balance shop-floor priorities.",
-        "Our predictive layer senses real-time demand, while the generative layer empowers engineers with specialized copilots. Simultaneously, our autonomous planning and procurement agents coordinate actions to keep inventory and schedules perfectly balanced.",
+        "AITEK transitions traditional manufacturing operations into adaptive, intelligent ecosystems. Our Agentic Manufacturing model unifies planning, production, and supply chain into a single connected enterprise — where AI agents sense, decide, and act continuously across all operational layers.",
+        "From demand planning and S&OP through integrated business planning, intelligent procurement, and supplier collaboration, our cognitive layers bridge every functional boundary. Production scheduling, inventory intelligence, logistics optimization, predictive maintenance, computer vision, digital twins, and control towers all converge into one self-optimizing manufacturing brain.",
       ],
-      capabilitiesHeading: "Key Capabilities",
+      capabilitiesHeading: "Core Focus Areas",
       capabilities: [
-        "Predictive ML: AI Demand Forecasting and OEE Intelligence",
-        "Generative AI: Manufacturing, Procurement, and Supply Chain Copilots",
-        "Agentic AI: Autonomous Maintenance and Procurement Agents",
-        "Centralized Multi-Agent Manufacturing Orchestrator",
+        "Smart Manufacturing & Digital Twins for real-time shop-floor intelligence",
+        "Demand Planning, S&OP, and Integrated Business Planning (IBP)",
+        "Intelligent Procurement, Supplier Collaboration & Inventory Intelligence",
+        "Production Scheduling, Logistics Optimization & Predictive Maintenance",
+        "Computer Vision & Control Towers for end-to-end operational visibility",
       ],
       detailScope: {
         heading: "Detailed Domain Solutions",
@@ -147,23 +148,24 @@ export const domainCategory: Category = {
       },
       businessImpactHeading: "Business Impact",
       businessImpact:
-        "Aligning shop-floor execution with business ambition delivers substantial improvements in OEE, significant downtime reductions, and optimized inventory carrying costs.",
+        "Manufacturers achieve a fully connected enterprise where planning cycles compress, OEE improves substantially, inventory carrying costs fall, and supply chain disruptions are resolved autonomously — before they impact the customer.",
     },
     {
       slug: "oil-gas",
-      pageTitle: "Predictive and Prescriptive Downstream Industrial AI",
-      tagline: "Oil & Gas – Downstream",
-      hook: "Downstream facilities must operate with maximum reliability, yet process deviations can rapidly escalate into safety failures or quality de-specifications. Hand-assembling fragmented historian and laboratory evidence delays corrective interventions.",
+      pageTitle: "Modernizing Downstream Energy for Performance, Safety, and Compliance",
+      tagline: "Downstream Energy (Oil & Gas)",
+      hook: "Downstream facilities face mounting pressure to maximize asset uptime, improve safety culture, and meet tightening environmental standards — all simultaneously. Fragmented historian data and manual inspection regimes delay critical interventions, exposing refineries to safety and regulatory risk.",
       solution: [
-        "We apply three robust AI capability layers designed specifically for downstream realities. From equipment failure predictions to operations copilots, our solutions convert raw process variables into safer, high-yield outcomes.",
-        "Our autonomous production agents continuously monitor variables and execute setpoint adjustments. We bridge the gap between DCS stability and APC optimization, ensuring safer scenario evaluation and minimized energy consumption.",
+        "AITEK modernizes downstream operations to optimize asset performance, improve safety, and ensure environmental and regulatory compliance. Our AI capability layers are purpose-built for the operational realities of refining, petrochemical, and terminal environments.",
+        "Intelligent asset management and maintenance agents deliver predictive maintenance and reliability engineering at scale. Operational optimization models drive refining process efficiency and energy reduction, while computer vision and digital twins provide enterprise-wide visibility — enabling executives to monitor performance and compliance from a single control plane.",
       ],
-      capabilitiesHeading: "Key Capabilities",
+      capabilitiesHeading: "Core Focus Areas",
       capabilities: [
-        "Process and Yield Optimization models for Crude and Vacuum Distillation",
-        "Predictive Maintenance and remaining useful life (RUL) estimation",
-        "Generative HSE, Operations, and Maintenance Copilots",
-        "Autonomous Production Planning and Safety Compliance Agents",
+        "Intelligent Asset Management: Predictive Maintenance & Reliability Engineering",
+        "Operational Optimization: Refining Process, Energy & Turnaround Planning",
+        "Computer Vision for HSE monitoring and equipment inspection",
+        "Safety & Sustainability: environmental compliance and risk intelligence",
+        "Enterprise Visibility: Digital Twins & Executive Operations Intelligence",
       ],
       detailScope: {
         heading: "Detailed Domain Solutions",
@@ -171,23 +173,23 @@ export const domainCategory: Category = {
       },
       businessImpactHeading: "Business Impact",
       businessImpact:
-        "Refineries reduce unplanned shutdowns and improve safety performance, maximizing gross margins while keeping compliance automated.",
+        "Downstream operators reduce unplanned shutdowns, improve HSE performance, and maximize gross margins — while keeping regulatory and environmental compliance fully automated across every asset.",
     },
     {
       slug: "insurance",
-      pageTitle: "Intelligent and Customer-Centric Insurance Workforces",
+      pageTitle: "Automating Core Insurance Decisions Through AI Governance and Predictive Intelligence",
       tagline: "Insurance",
-      hook: "Carriers face rising claims costs, high underwriting cycle times, and sophisticated fraud. Traditional automation cannot adapt to unstructured documentation or handle complex, cross-functional risk anomalies.",
+      hook: "Carriers must navigate strict regulatory environments while managing rising claims volumes, sophisticated fraud schemes, and slow underwriting cycles. Traditional automation fails in the face of unstructured documentation, cross-functional risk anomalies, and catastrophe-level events that demand real-time decisioning.",
       solution: [
-        "AITEK structures a self-driving operating model built on predictive, generative, and agentic layers. Our digital workforce handles administrative tasks, scores risks, and validates documentation autonomously, freeing humans for complex judgements.",
-        "Specialized claims, underwriting, and fraud agents cooperate in real-time to execute end-to-end workflows. The system verifies damage, detects anomalies, and reconciles payments, delivering faster settlements while lowering risk exposure.",
+        "AITEK helps insurers automate core back-office decisions through predictive analytics, document intelligence, and AI governance — operating within strict regulatory guardrails from day one. Our self-driving insurance operating model spans the full value chain, from first notice of loss to settlement and risk renewal.",
+        "Intelligent claims management agents automate intake, triage, and settlement. Underwriting intelligence models score risk and optimize pricing dynamically. Fraud detection and risk intelligence systems identify behavioral and document fraud patterns, while customer and operations transformation agents handle the full service experience — reducing cycle times and operational costs simultaneously.",
       ],
-      capabilitiesHeading: "Key Capabilities",
+      capabilitiesHeading: "Core Focus Areas",
       capabilities: [
-        "Predictive Premium Pricing and Catastrophe Risk modeling",
-        "Generative Underwriting, Claims, and Customer Service Copilots",
-        "Autonomous Underwriting, Claims, and Fraud agents",
-        "Centralized Multi-Agent Insurance Operations Orchestrator",
+        "Intelligent Claims Management: Intake, Triage & Automated Settlement",
+        "Underwriting Intelligence: Risk Scoring & Pricing Optimization",
+        "Fraud Detection & Risk Intelligence: Behavioral, Document Fraud & Catastrophe Risk Modeling",
+        "Customer & Operations Transformation across the insurance value chain",
       ],
       detailScope: {
         heading: "Detailed Domain Solutions",
@@ -195,23 +197,23 @@ export const domainCategory: Category = {
       },
       businessImpactHeading: "Business Impact",
       businessImpact:
-        "Insurers achieve massive reductions in claims processing times, improved underwriting cycle times, and significantly lowered operational costs.",
+        "Insurers achieve significant reductions in claims processing times and underwriting cycle times, improved fraud detection rates, and lower operational costs — all within a compliant, governed AI framework.",
     },
     {
       slug: "healthcare",
-      pageTitle: "Connected Intelligence for Providers and Payers",
-      tagline: "Healthcare",
-      hook: "Navigating rising operational costs, workforce shortages, and complex billing structures stretches healthcare systems to their limit. Disconnected administrative flows delay clinical treatments and compromise care coordination.",
+      pageTitle: "Unifying Clinical, Administrative, and Financial Operations for Providers and Payers",
+      tagline: "Healthcare (Providers & Payers)",
+      hook: "Healthcare organizations face rising operational costs, severe workforce shortages, and fragmented administrative workflows that delay clinical care. Disconnected systems across providers and payers create logistics waste, compromise patient experience, and drain revenue from every part of the system.",
       solution: [
-        "AITEK integrates clinical, financial, and operational workflows into a unified digital operating model. We deliver predictive and generative solutions that break administrative silos, helping caregivers focus entirely on exceptional care.",
-        "Our patient journey analytics minimize facility wait times, while operations intelligence optimizes bed utilization. We empower clinical teams with decision intelligence, combining diagnostic data and patient histories for proactive medical intervention.",
+        "AITEK unifies clinical, administrative, operational, and financial functions into a single digital operating model — reducing healthcare logistics waste and improving patient experiences at every touchpoint.",
+        "For providers, patient journey intelligence minimizes wait times, clinical decision support empowers care teams, hospital operations intelligence optimizes bed and resource utilization, and revenue cycle intelligence accelerates realization. For payers, our AI agents automate claims adjudication and fraud detection, predict readmission risk before discharge, and optimize healthcare supply chain performance across the network.",
       ],
-      capabilitiesHeading: "Key Capabilities",
+      capabilitiesHeading: "Core Focus Areas",
       capabilities: [
-        "Patient Journey, Revenue Cycle, and Hospital Operations intelligence",
-        "Payer-specific Claims, Payment Integrity, and Care Management intelligence",
-        "Generative Clinical, Care Management, and Claims Copilots",
-        "Patient Engagement and Clinical Workflow agents",
+        "Provider: Patient Journey Intelligence & Clinical Decision Support",
+        "Provider: Hospital Operations Intelligence & Revenue Cycle Intelligence",
+        "Payer: Claims Adjudication & Fraud Detection",
+        "Payer: Predictive Readmission Intelligence & Healthcare Supply Chain Intelligence",
       ],
       detailScope: {
         heading: "Detailed Domain Solutions",
@@ -219,23 +221,23 @@ export const domainCategory: Category = {
       },
       businessImpactHeading: "Business Impact",
       businessImpact:
-        "Providers optimize resource utilization and accelerate revenue cycle realization, while payers achieve faster, more accurate claims adjudication.",
+        "Providers optimize resource utilization, reduce patient wait times, and accelerate revenue cycle realization — while payers achieve faster, more accurate claims adjudication, lower fraud losses, and improved care management outcomes.",
     },
     {
       slug: "pharmaceuticals",
-      pageTitle: "Zero-Touch Quality and Compliance in Pharmaceuticals",
+      pageTitle: "Connected Digital Ecosystems for R&D, Manufacturing, Quality, and Supply Chain",
       tagline: "Pharmaceuticals",
-      hook: "Pharmaceutical manufacturing demands absolute batch consistency and rigid regulatory reporting under intense cost pressures. A single cold chain temperature deviation or delayed adverse event report can derail clinical and commercial success.",
+      hook: "Pharmaceutical innovation is constrained by fragmented R&D pipelines, manual quality oversight, rigid regulatory reporting timelines, and cold chain vulnerabilities. A single batch deviation, delayed adverse event report, or temperature excursion can derail clinical programs and commercial launches alike.",
       solution: [
-        "We implement a multi-layered AI framework that connects R&D, clinical trials, and manufacturing. Our specialized agents autonomously track logistics, analyze continuous manufacturing telemetry, and generate compliant documentation.",
-        "These systems provide quality and regulatory professionals with enterprise copilots to simplify knowledge discovery. We automate adverse event monitoring, safety signal detection, and continuous manufacturing analytics directly on the factory floor.",
+        "AITEK engineers connected digital ecosystems where R&D, continuous manufacturing, quality, and supply chain function together to accelerate innovation and ensure absolute compliance. Our multi-layered AI framework closes every gap across the pharmaceutical value chain.",
+        "Pharma supply and cold chain intelligence agents provide real-time temperature monitoring and end-to-end product traceability. Regulatory compliance and pharmacovigilance systems automate adverse event monitoring and safety signal detection. Intelligent manufacturing and commercialization platforms deliver digital quality management and continuous manufacturing analytics — ensuring every batch is consistent, compliant, and traceable from synthesis to patient.",
       ],
-      capabilitiesHeading: "Key Capabilities",
+      capabilitiesHeading: "Core Focus Areas",
       capabilities: [
-        "Predictive Smart Pharma Manufacturing and CAPA Intelligence",
-        "Generative Research Intelligence, Regulatory, and Quality Copilots",
-        "Autonomous Manufacturing, Quality, and Regulatory Affairs Agents",
-        "Supply Chain & Cold Chain Logistics Agents with real-time tracking",
+        "Pharma Supply & Cold Chain Intelligence: Temperature Monitoring & Product Traceability",
+        "Regulatory Compliance & Pharmacovigilance: Automated Adverse Event Monitoring",
+        "Intelligent Manufacturing & Commercialization: Digital Quality Management",
+        "Continuous Manufacturing Analytics for batch consistency and yield optimization",
       ],
       detailScope: {
         heading: "Detailed Domain Solutions",
@@ -243,14 +245,14 @@ export const domainCategory: Category = {
       },
       businessImpactHeading: "Business Impact",
       businessImpact:
-        "Pharmaceutical leaders realize faster clinical trial timelines, guaranteed batch consistency, and perfect compliance across global temperature-tracked distribution networks.",
+        "Pharmaceutical leaders accelerate clinical trial timelines, guarantee batch consistency and regulatory compliance, and maintain perfect traceability across global temperature-tracked distribution networks — from API synthesis to last-mile delivery.",
     },
   ],
 };
 
 export const functionsCategory: Category = {
   slug: "functions",
-  name: "Specific Functions",
+  name: "Functions",
   intro:
     "Cross-industry capability building blocks — the reusable engineering patterns behind every industry and domain solution we deliver.",
   pages: [

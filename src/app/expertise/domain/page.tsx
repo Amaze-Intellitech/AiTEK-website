@@ -35,10 +35,13 @@ export default async function DomainDetailPage({
   const page = getCategoryPage("domain", slug);
   if (!page) notFound();
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { detailScope: _removed, ...pageWithoutDetailScope } = page;
+
   return (
     <>
       <PhotoHero
-        eyebrow="Domain/Functions"
+        eyebrow="Domain"
         heading={page.pageTitle}
         paragraphs={[page.tagline ?? ""]}
         image={domainImages[page.slug]}
@@ -46,7 +49,7 @@ export default async function DomainDetailPage({
 
       <section className="py-16 sm:py-20">
         <Container>
-          <HookPageBody page={page} />
+          <HookPageBody page={pageWithoutDetailScope} />
         </Container>
       </section>
 

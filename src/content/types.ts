@@ -32,6 +32,6 @@ export interface Category {
 export interface Industry {
   slug: string;
   name: string;
-  shortTagline: string;
+  shortTagline?: string;
   section: HookPage;
 }

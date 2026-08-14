@@ -1,82 +1,170 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
-import PhotoHero from "@/components/ui/PhotoHero";
+import Hero from "@/components/ui/Hero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
-import NumberedStep from "@/components/ui/NumberedStep";
-import CheckList from "@/components/ui/CheckList";
 import CTABand from "@/components/ui/CTABand";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { dbeHero, keyOfferings, transformationLifecycle, dbeBusinessImpact } from "@/content/dbe";
-import { dbeImage } from "@/content/images";
+import {
+  hero,
+  inflectionPoint,
+  whyFails,
+  digitalBusinessEngineering,
+  corePillars,
+  industryIntelligence,
+  closingCta,
+} from "@/content/home";
+import { industries } from "@/content/industries";
+import { heroArchitecture } from "@/content/images";
 
 export const metadata: Metadata = {
-  title: "Digital Business Engineering",
-  description: dbeHero.hook,
+  title: "AITEK — Architecting the Autonomous Enterprise",
+  description: hero.subhead,
 };
 
-export default function DigitalBusinessEngineeringPage() {
+export default function HomePage() {
   return (
     <>
-      <PhotoHero
-        eyebrow={dbeHero.eyebrow}
-        heading={dbeHero.heading}
-        paragraphs={[dbeHero.hook]}
-        image={dbeImage}
+      {/* ── Hero ─────────────────────────────────────────────────── */}
+      <Hero
+        heading={hero.heading}
+        paragraphs={[hero.subhead]}
+        image={heroArchitecture}
+        cta={
+          <>
+            <Button href="/contact">Start Your Discovery Session</Button>
+            <Button href="/expertise" variant="secondary">
+              Explore Expertise
+            </Button>
+          </>
+        }
       />
 
-      <section className="py-16 sm:py-20">
+      {/* ── Digital Inflection Point ─────────────────────────────── */}
+      <section className="border-t border-border bg-surface py-16 sm:py-20">
         <Container>
-          <Reveal className="max-w-3xl space-y-4">
-            {dbeHero.solution.map((p) => (
-              <p key={p} className="text-base leading-relaxed text-muted">
-                {p}
-              </p>
+          <Reveal className="max-w-3xl">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
+              {inflectionPoint.eyebrow}
+            </p>
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+              {inflectionPoint.heading}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted">{inflectionPoint.text}</p>
+            <p className="mt-6 text-sm font-semibold text-foreground">{inflectionPoint.lead}</p>
+          </Reveal>
+          <Reveal className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {inflectionPoint.shifts.map((s) => (
+              <div key={s.from} className="rounded-lg border border-border bg-background p-5">
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted line-through">
+                  {s.from}
+                </p>
+                <p className="mt-2 text-sm font-semibold text-foreground">{s.to}</p>
+              </div>
             ))}
           </Reveal>
         </Container>
       </section>
 
-      <section className="border-t border-border bg-surface py-16 sm:py-20">
+      {/* ── Why Transformation Fails ─────────────────────────────── */}
+      <section className="py-16 sm:py-20">
         <Container>
-          <SectionHeading heading={keyOfferings.heading} />
-          <Reveal className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {keyOfferings.items.map((item) => (
-              <Card key={item.title}>
-                <h3 className="font-semibold text-foreground">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{item.desc}</p>
+          <Reveal className="max-w-3xl">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
+              {whyFails.eyebrow}
+            </p>
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+              {whyFails.heading}
+            </h2>
+            <p className="mt-1 text-base font-medium text-foreground/80">{whyFails.subheading}</p>
+            <p className="mt-4 text-base leading-relaxed text-muted">{whyFails.text}</p>
+          </Reveal>
+          <Reveal className="mt-10 grid gap-6 sm:grid-cols-3">
+            {whyFails.problems.map((p) => (
+              <Card key={p.title}>
+                <h3 className="font-semibold text-foreground">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{p.desc}</p>
+                <p className="mt-3 text-xs font-semibold text-primary">{p.impact}</p>
               </Card>
             ))}
           </Reveal>
         </Container>
       </section>
 
-      <section className="py-16 sm:py-20">
+      {/* ── Digital Business Engineering ─────────────────────────── */}
+      <section className="border-t border-border bg-surface py-16 sm:py-20">
         <Container>
-          <SectionHeading heading={transformationLifecycle.heading} />
-          <Reveal className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
-            {transformationLifecycle.stages.map((stage, i) => (
-              <NumberedStep key={stage.title} index={i + 1} title={stage.title} desc={stage.desc} />
+          <Reveal className="max-w-3xl">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
+              {digitalBusinessEngineering.eyebrow}
+            </p>
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+              {digitalBusinessEngineering.heading}
+            </h2>
+            <p className="mt-1 text-base font-medium text-foreground/80">
+              {digitalBusinessEngineering.subheading}
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted">
+              {digitalBusinessEngineering.text}
+            </p>
+          </Reveal>
+          <Reveal className="mt-10 grid gap-6 sm:grid-cols-3">
+            {digitalBusinessEngineering.pillars.map((pillar) => (
+              <Card key={pillar.title}>
+                <h3 className="font-semibold text-foreground">{pillar.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{pillar.desc}</p>
+              </Card>
             ))}
           </Reveal>
         </Container>
       </section>
 
-      <section className="border-t border-border bg-surface py-16 sm:py-20">
+      {/* ── Core Pillars ─────────────────────────────────────────── */}
+      <section className="py-16 sm:py-20">
         <Container>
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground">{dbeBusinessImpact.heading}</h2>
-            <div className="mt-5">
-              <CheckList items={[dbeBusinessImpact.text]} />
-            </div>
-          </div>
+          <SectionHeading heading={corePillars.heading} />
+          <Reveal className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {corePillars.pillars.map((pillar) => (
+              <Card key={pillar.title}>
+                <h3 className="font-semibold text-foreground">{pillar.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{pillar.desc}</p>
+              </Card>
+            ))}
+          </Reveal>
         </Container>
       </section>
 
+      {/* ── Industry Intelligence ─────────────────────────────────── */}
+      <section className="border-t border-border bg-surface py-16 sm:py-20">
+        <Container>
+          <Reveal className="max-w-3xl">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
+              {industryIntelligence.eyebrow}
+            </p>
+            <p className="text-base leading-relaxed text-muted">{industryIntelligence.text}</p>
+          </Reveal>
+          <Reveal className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {industries.map((ind) => (
+              <a
+                key={ind.slug}
+                href={`/industries/${ind.slug}`}
+                className="group rounded-lg border border-border bg-background px-5 py-4 transition hover:border-primary"
+              >
+                <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  {ind.name}
+                </p>
+                <p className="mt-1 text-xs leading-relaxed text-muted">{ind.shortTagline ?? ind.section.pageTitle}</p>
+              </a>
+            ))}
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* ── Closing CTA ──────────────────────────────────────────── */}
       <CTABand
-        heading="Ready to engineer your digital business?"
-        text="Start with a Digital Assessment, Audit & Path Finder engagement to establish your baseline and business case."
+        heading={closingCta.heading}
+        text={`${closingCta.subheading} ${closingCta.text}`}
         cta={<Button href="/contact">Start Your Discovery Session</Button>}
       />
     </>

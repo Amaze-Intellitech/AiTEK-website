@@ -13,7 +13,7 @@ The content is organized around five industry verticals — Manufacturing, Oil &
 - **Industries** — the business problem, challenges, and outcomes per vertical
 - **Solutions** — the technical answer, as four AI capability pages (AI/ML, AI Agents, Agentic Framework, Tools)
 
-Alongside that, an **Expertise** tree (Consulting, Domain/Functions, Specific Functions) serves visitors who think in capabilities rather than industries, a dedicated **Digital Business Engineering** page covers AITEK's flagship transformation methodology, and **About**/**Contact** round out the site. See `../docs/SITE-OVERVIEW.md` for the full route map and the reasoning behind each engineering decision.
+Alongside that, an **Expertise** tree (Consulting, Domain/Functions, Functions) serves visitors who think in capabilities rather than industries, a dedicated **Digital Business Engineering** page covers AITEK's flagship transformation methodology, and **About**/**Contact** round out the site. See `../docs/SITE-OVERVIEW.md` for the full route map and the reasoning behind each engineering decision.
 
 ## Tech stack
 

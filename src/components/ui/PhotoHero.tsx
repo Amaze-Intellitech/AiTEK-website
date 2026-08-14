@@ -17,9 +17,9 @@ export default function PhotoHero({
   return (
     <section className="relative overflow-hidden border-b border-border">
       <div className="absolute inset-0">
-        <Image src={image.src} alt={image.alt} fill priority className="object-cover" sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <Image src={image.src} alt={image.alt} fill priority className="object-cover lg:object-right" sizes="100vw" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background from-0% via-background/95 via-40% to-transparent to-100%" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background from-0% via-background/20 via-30% to-transparent" />
       </div>
       <div className="relative mx-auto w-full px-6 py-24 sm:py-32 lg:px-8">
         <div className="max-w-2xl">

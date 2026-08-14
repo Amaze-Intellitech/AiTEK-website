@@ -35,6 +35,9 @@ export default async function SolutionPage({
   const solution = getSolution(slug);
   if (!solution) notFound();
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { detailScope: _removed, ...solutionWithoutDetailScope } = solution;
+
   return (
     <>
       <PhotoHero
@@ -46,7 +49,7 @@ export default async function SolutionPage({
 
       <section className="py-16 sm:py-20">
         <Container>
-          <HookPageBody page={solution} />
+          <HookPageBody page={solutionWithoutDetailScope} />
         </Container>
       </section>
 

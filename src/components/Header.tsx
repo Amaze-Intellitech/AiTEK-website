@@ -81,14 +81,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <Container className="flex h-18 items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-2.5">
-          <Image src="/images/aitek-logo.png" alt="" width={32} height={32} className="h-8 w-8" priority />
-          <span className="flex flex-col leading-none">
-            <span className="text-xl font-bold tracking-tight text-foreground">AITEK</span>
-            <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted">
-              Autonomous Enterprise
-            </span>
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.jpeg"
+            alt="AITEK – Autonomous Enterprise"
+            width={120}
+            height={120}
+            className="h-14 w-auto object-contain"
+            priority
+          />
         </Link>
 
         <nav ref={navRef} className="hidden items-center gap-1 lg:flex">

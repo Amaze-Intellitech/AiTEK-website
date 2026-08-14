@@ -1,272 +1,114 @@
 import type { DetailGroup } from "./types";
 
-// Verbatim capability catalogs from the updated content deliverable (reference/1.docx).
-// Shared between the Industries pages ("Detailed [X] Solutions") and the Expertise >
-// Domain/Functions pages ("Detailed Domain Solutions") — the two placements list identical
-// items in the source document.
 export const verticalCapabilityLayers: Record<string, DetailGroup[]> = {
   manufacturing: [
     {
-      title: "Machine Learning & Predictive Intelligence",
-      items: [
-        "AI Demand Forecasting",
-        "Real-Time Demand Sensing",
-        "Sales & Operations Planning (S&OP)",
-        "Integrated Business Planning (IBP)",
-        "Forecast Accuracy Intelligence",
-        "Customer Demand Analytics",
-        "Promotion Planning",
-        "Price Optimization",
-        "Procurement Intelligence",
-        "Spend Analytics",
-        "Supplier Risk Management",
-        "Supplier Performance Analytics",
-        "Price Benchmarking",
-        "Production Planning & Capacity Planning",
-        "Production Scheduling",
-        "OEE Intelligence",
-        "Manufacturing Analytics",
-        "Process Optimization",
-        "Asset Health Intelligence",
-        "Machine Health Monitoring",
-        "Remaining Useful Life Prediction",
-        "Inventory Optimization",
-        "Warehouse Intelligence",
-        "Route Optimization",
-        "Fleet Intelligence",
-        "Executive KPI Intelligence",
-        "Root Cause Analytics",
-      ],
+      title: "Demand Forecasting & Inventory Optimization",
+      description:
+        "Leverages time-series predictive analytics and regression models to optimize reorder points and predict raw material needs. This minimizes manual forecasting errors and reduces inventory carrying costs across the supply chain.",
     },
     {
-      title: "Generative AI Solutions",
-      items: [
-        "Manufacturing Copilot",
-        "Procurement Copilot",
-        "Supply Chain Copilot",
-        "Executive Copilot",
-        "Contract Intelligence",
-        "RFQ/RFP Automation",
-        "Document Intelligence",
-        "Enterprise Knowledge Assistant",
-        "Intelligent Reporting",
-        "Enterprise Search",
-      ],
+      title: "Smart Factory & Process Control",
+      description:
+        "Utilizes reinforcement learning and computer vision to enable autonomous process control and dynamic production scheduling. It ensures consistent product quality while maximizing overall equipment effectiveness (OEE) and throughput.",
     },
     {
-      title: "Agentic AI & Autonomous Operations",
-      items: [
-        "Autonomous Planning Agents",
-        "Autonomous Procurement Agents",
-        "Autonomous Manufacturing Agents",
-        "Autonomous Maintenance Agents",
-        "Demand Intelligence Agents",
-        "Procurement Intelligence Agents",
-        "Production Intelligence Agents",
-        "Warehouse Intelligence Agents",
-        "Logistics Intelligence Agents",
-        "Multi-Agent Manufacturing Orchestrators",
-      ],
+      title: "Predictive Maintenance & Asset Health",
+      description:
+        "Analyzes equipment data, such as vibration and temperature anomalies, to predict failures before they occur. This approach estimates the remaining useful life of machinery, significantly reducing unplanned downtime.",
+    },
+    {
+      title: "Autonomous Supply Chain Agents",
+      description:
+        "Deploys multi-agent systems that autonomously adjust procurement, monitor supplier lead times, and recalibrate key performance indicators. It enables a self-driving, resilient supply chain that reacts proactively to operational disruptions.",
     },
   ],
   "oil-gas": [
     {
-      title: "Machine Learning & Predictive Intelligence",
-      items: [
-        "Refinery Process Optimization",
-        "Yield Optimization",
-        "Crude Blend Optimization",
-        "Production Planning",
-        "Capacity Planning",
-        "Production Forecasting",
-        "Feedstock Optimization",
-        "Product Allocation Intelligence",
-        "Throughput Optimization",
-        "Predictive Maintenance",
-        "Asset Performance Management",
-        "Equipment Health Monitoring",
-        "Reliability Analytics",
-        "Corrosion Monitoring",
-        "Remaining Useful Life Prediction",
-        "Process Safety Analytics",
-        "Incident Prediction",
-        "Risk Intelligence",
-        "Emissions Monitoring",
-        "Supply Chain Visibility",
-        "Pipeline Monitoring",
-        "Fleet Intelligence",
-        "Distribution Planning",
-        "Market Intelligence",
-        "Pricing Analytics",
-        "Trading Risk Analytics",
-        "Margin Optimization",
-        "Energy Consumption Analytics",
-        "Carbon Emissions Intelligence",
-        "Executive KPI Intelligence",
-      ],
+      title: "Predictive Maintenance (PdM) & Asset Reliability",
+      description:
+        "Forecasts critical equipment breakdowns using vibration analysis and temperature anomaly detection. This ensures higher asset utilization, lowers operational risk, and prevents costly unplanned downtime.",
     },
     {
-      title: "Generative AI Solutions",
-      items: [
-        "Operations Copilot",
-        "Maintenance Copilot",
-        "HSE Copilot",
-        "Executive Copilot",
-        "Engineering Knowledge Assistant",
-        "Document Intelligence",
-        "Enterprise Search",
-        "Intelligent Reporting",
-        "Regulatory Knowledge Assistant",
-      ],
+      title: "Computer Vision for Industrial Inspection",
+      description:
+        "Automates visual inspections to rapidly identify surface defects, pipeline leaks, and corrosion. It enhances operational safety and provides precise thermal imaging for hotspot detection.",
     },
     {
-      title: "Agentic AI & Autonomous Operations",
-      items: [
-        "Autonomous Production Planning Agents",
-        "Maintenance Intelligence Agents",
-        "Safety Compliance Agents",
-        "Logistics Intelligence Agents",
-        "Trading Intelligence Agents",
-        "Executive Intelligence Agents",
-        "Multi-Agent Operations Orchestrators",
-      ],
+      title: "Autonomous Turnaround & Shutdown Agents",
+      description:
+        "Deploys specialized AI agents to autonomously plan maintenance schedules and orchestrate multi-asset workflows. This reduces the time and administrative burden associated with complex facility turnarounds.",
+    },
+    {
+      title: "Refinery Process & Energy Optimization",
+      description:
+        "Analyzes real-time operational data to optimize crude blending, throughput, and energy consumption. It drives higher production reliability while enhancing environmental compliance and reducing overall emissions.",
     },
   ],
   insurance: [
     {
-      title: "Machine Learning & Predictive Intelligence",
-      items: [
-        "Intelligent Risk Assessment",
-        "AI-Powered Underwriting",
-        "Automated Risk Scoring",
-        "Premium Pricing Optimization",
-        "Customer Risk Profiling",
-        "Portfolio Risk Analytics",
-        "Claims Severity Prediction",
-        "Claims Settlement Optimization",
-        "Fraud Risk Scoring",
-        "Behavioral Fraud Analytics",
-        "Network Fraud Analytics",
-        "Enterprise Risk Analytics",
-        "Predictive Risk Intelligence",
-        "Catastrophe Risk Modeling",
-        "Customer Segmentation",
-        "Customer Lifetime Value Analytics",
-        "Customer Churn Prediction",
-        "Next Best Action Intelligence",
-      ],
+      title: "Intelligent Risk Assessment & AI Underwriting",
+      description:
+        "Automates risk scoring, evaluates policy eligibility, and optimizes premium pricing models. This streamlines the underwriting workbench and significantly improves decision-making accuracy.",
     },
     {
-      title: "Generative AI Solutions",
-      items: [
-        "Underwriting Copilot",
-        "Claims Copilot",
-        "Customer Service Copilot",
-        "Executive Copilot",
-        "Policy Document Intelligence",
-        "Claims Document Intelligence",
-        "Conversational AI",
-      ],
+      title: "Intelligent Claims Management",
+      description:
+        "Accelerates claims processing by automating intake, triage, document processing, and damage assessment workflows. It reduces manual bottlenecks and ensures faster, more efficient settlement resolutions.",
     },
     {
-      title: "Agentic AI & Autonomous Operations",
-      items: [
-        "Autonomous Underwriting Agents",
-        "Claims Processing Agents",
-        "Fraud Intelligence Agents",
-        "Customer Engagement Agents",
-        "Policy Administration Agents",
-        "Risk Intelligence Agents",
-        "Multi-Agent Insurance Operations Orchestrators",
-      ],
+      title: "Fraud Detection & Risk Analytics",
+      description:
+        "Deploys behavioral and network analytics to proactively identify document fraud and assess catastrophe risk. It minimizes financial losses and strengthens enterprise portfolio risk management.",
+    },
+    {
+      title: "Autonomous Insurance Operations Agents",
+      description:
+        "Utilizes multi-agent orchestrators to autonomously coordinate underwriting decisions, claims processing, and customer engagement. This transitions fragmented insurance workflows into a unified, goal-driven execution model.",
     },
   ],
   healthcare: [
     {
-      title: "Machine Learning & Predictive Intelligence",
-      items: [
-        "Patient Journey Intelligence",
-        "Clinical Decision Intelligence",
-        "Medical Imaging Analytics",
-        "Hospital Operations Intelligence",
-        "Bed Utilization Analytics",
-        "Workforce Planning",
-        "Revenue Cycle Intelligence",
-        "Predictive Readmissions",
-        "Population Health Intelligence",
-        "Claims Intelligence",
-        "Payment Integrity Intelligence",
-        "Care Management Intelligence",
-        "Provider Network Intelligence",
-        "Regulatory Risk Intelligence",
-        "Member Experience Intelligence",
-        "Utilization Management",
-        "Fraud, Waste & Abuse Detection",
-      ],
+      title: "Clinical Decision & Patient Journey Intelligence",
+      description:
+        "Empowers healthcare providers with AI-driven diagnostic insights, medical imaging analytics, and optimized appointment scheduling. It improves clinical accuracy, reduces wait times, and enhances the overall patient experience.",
     },
     {
-      title: "Generative AI Solutions",
-      items: [
-        "Clinical Copilot",
-        "Care Management Copilot",
-        "Claims Copilot",
-        "Member Service Copilot",
-        "Healthcare Knowledge Assistant",
-        "Medical Document Intelligence",
-        "Conversational AI",
-        "Executive Healthcare Copilot",
-      ],
+      title: "Hospital Operations & Revenue Cycle Intelligence",
+      description:
+        "Optimizes bed utilization, workforce capacity, and operating room scheduling to streamline hospital throughput. It concurrently accelerates the revenue cycle by modernizing coding, billing, and payment reconciliation.",
     },
     {
-      title: "Agentic AI & Autonomous Operations",
-      items: [
-        "Patient Engagement Agents",
-        "Clinical Workflow Agents",
-        "Claims Processing Agents",
-        "Care Management Agents",
-        "Utilization Management Agents",
-        "Executive Healthcare Agents",
-        "Multi-Agent Healthcare Orchestrators",
-      ],
+      title: "Payer Claims & Payment Integrity Intelligence",
+      description:
+        "Modernizes health insurance operations through automated claims adjudication, policy validation, and intelligent exception management. It accelerates accurate member services and actively combats fraud, waste, and abuse.",
+    },
+    {
+      title: "Predictive Readmission & Population Health Analytics",
+      description:
+        "Utilizes predictive risk models to identify high-risk patients prior to discharge, enabling targeted interventions and remote monitoring. This proactively reduces hospital readmission rates and supports value-based care initiatives.",
     },
   ],
   pharmaceuticals: [
     {
-      title: "Machine Learning & Predictive Intelligence",
-      items: [
-        "Smart Pharma Manufacturing",
-        "Batch Production Intelligence",
-        "Equipment Monitoring",
-        "CAPA Intelligence",
-        "GMP Compliance",
-        "Commercial Analytics",
-        "Sales Force Effectiveness",
-        "Market Access Intelligence",
-        "Product Risk Mitigation Analysis",
-      ],
+      title: "Smart Pharma Manufacturing & Batch Intelligence",
+      description:
+        "Optimizes continuous manufacturing analytics, equipment monitoring, and digital quality management. It ensures high manufacturing consistency and strict adherence to GMP compliance standards.",
     },
     {
-      title: "Generative AI Solutions",
-      items: [
-        "Research Intelligence Analyst",
-        "Regulatory Copilot",
-        "Quality Copilot",
-        "Pharmacovigilance Copilot",
-        "Medical Affairs Copilot",
-        "Scientific Knowledge Assistant",
-        "Regulatory Document Intelligence",
-      ],
+      title: "Regulatory Compliance & Pharmacovigilance",
+      description:
+        "Automates document submissions, adverse event monitoring, and safety signal detection to uphold patient safety. It streamlines global regulatory intelligence and ensures constant audit readiness.",
     },
     {
-      title: "Agentic AI & Autonomous Operations",
-      items: [
-        "Manufacturing & Quality Agents",
-        "Regulatory Affairs Agents",
-        "Pharmacovigilance Agents",
-        "Supply Chain & Cold Chain Logistics Agents",
-        "Product Risk Mitigation Agents",
-        "Multi-Agent Pharmaceutical Operations Orchestrators",
-      ],
+      title: "Pharma Supply & Cold Chain Intelligence",
+      description:
+        "Enhances demand planning, real-time temperature monitoring, and logistics visibility across complex distribution networks. It ensures product traceability and maintains resilient, compliant cold chain logistics.",
+    },
+    {
+      title: "Autonomous Pharmaceutical Operations Orchestration",
+      description:
+        "Deploys multi-agent systems to independently coordinate research, manufacturing, quality assurance, and supply chain execution. It creates a connected, self-optimizing ecosystem that reduces development timelines and accelerates drug commercialization.",
     },
   ],
 };

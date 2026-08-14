@@ -38,7 +38,7 @@ export default async function FunctionDetailPage({
   return (
     <>
       <PhotoHero
-        eyebrow="Specific Functions"
+        eyebrow="Functions"
         heading={page.pageTitle}
         paragraphs={[page.tagline ?? ""]}
         image={functionImages[page.slug]}
@@ -51,9 +51,9 @@ export default async function FunctionDetailPage({
       </section>
 
       <CTABand
-        heading="Explore the rest of Specific Functions"
+        heading="Explore the rest of Functions"
         text="Intelligent Factory, Supply Chain Management, Manufacturing Excellence, Smart Operations, Digital Twins, and SAP."
-        cta={<Button href="/expertise/functions">View Specific Functions</Button>}
+        cta={<Button href="/expertise/functions">View Functions</Button>}
       />
     </>
   );
