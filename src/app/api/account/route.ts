@@ -6,8 +6,17 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
   try {
     const accessToken = await getZohoAccessToken();
+    const accountId = process.env.ZOHO_ACCOUNT_ID;
 
-    const zohoResponse = await fetch(`https://mail.zoho.in/api/accounts`, {
+    if (!accountId) {
+      console.error('ZOHO_ACCOUNT_ID is not configured.');
+      return NextResponse.json(
+        { error: 'Server configuration error.' },
+        { status: 500 }
+      );
+    }
+
+    const zohoResponse = await fetch(`https://mail.zoho.in/api/accounts/${accountId}`, {
       method: 'GET',
       headers: {
         'Authorization': `Zoho-oauthtoken ${accessToken}`,

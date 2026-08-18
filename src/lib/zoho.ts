@@ -1,7 +1,7 @@
 export async function getZohoAccessToken(): Promise<string> {
-  const clientId = process.env.NEXT_PUBLIC_ZOHO_CLIENT_ID;
-  const clientSecret = process.env.NEXT_PUBLIC_ZOHO_CLIENT_SECRET;
-  const refreshToken = process.env.NEXT_PUBLIC_ZOHO_REFRESH_TOKEN;
+  const clientId = process.env.ZOHO_CLIENT_ID;
+  const clientSecret = process.env.ZOHO_CLIENT_SECRET;
+  const refreshToken = process.env.ZOHO_REFRESH_TOKEN;
   console.log("ZOHO_CLIENT_ID:", clientId);
   console.log("SENDING REFRESH TOKEN:", refreshToken);
 
