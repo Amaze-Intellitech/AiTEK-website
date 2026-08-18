@@ -391,7 +391,7 @@ export default function ContactForm() {
           <Button onClick={goBack} variant="secondary" className={step === 0 ? "invisible" : ""}>
             Back
           </Button>
-          <Button 
+          <Button
             onClick={handleAdvance}
             className={(stepValid && !isSubmitting) ? "" : "pointer-events-none opacity-40"}
           >

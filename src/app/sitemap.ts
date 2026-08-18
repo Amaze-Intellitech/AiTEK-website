@@ -3,6 +3,8 @@ import { industries } from "@/content/industries";
 import { solutions } from "@/content/solutions";
 import { consultingCategory, domainCategory, functionsCategory, aiForEnterprise } from "@/content/expertise";
 
+export const dynamic = "force-static";
+
 const siteUrl = "https://www.aitek.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
