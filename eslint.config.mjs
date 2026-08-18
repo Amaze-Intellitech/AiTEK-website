@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Passenger entry point for cPanel — plain Node CommonJS, not app source.
+    "server.js",
   ]),
 ]);
 

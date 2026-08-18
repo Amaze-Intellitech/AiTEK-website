@@ -53,7 +53,28 @@ docs/
 
 ## Deploying
 
-This is a stock Next.js app with no platform-specific config yet, so any Next.js-compatible host works. The recommended path is [Vercel](https://vercel.com) (built by the Next.js team):
+The contact form sends mail through `src/app/api/email/send` (and related routes under `src/app/api/`), which call the Zoho Mail API using server-only secrets. That means the app needs an actual Node.js process at runtime — it can't be served as static files.
 
-- **Vercel CLI** — `npm i -g vercel`, then `vercel` (preview) or `vercel --prod` from the project root. Vercel builds it on their infrastructure; running `npm run build` locally first is a good sanity check but not required.
-- **Git-based** — push this repo to GitHub/GitLab/Bitbucket and import it in the Vercel dashboard (**Add New Project**). Every subsequent push auto-deploys, with preview URLs per branch/PR.
+For the full step-by-step walkthrough, see [`../docs/DEPLOYMENT.md`](../docs/DEPLOYMENT.md) — kept outside this folder alongside `SITE-OVERVIEW.md` so it doesn't ship as part of the app. Summary below.
+
+### Environment variables
+
+Four server-only env vars are required (see `.env.example`): `ZOHO_CLIENT_ID`, `ZOHO_CLIENT_SECRET`, `ZOHO_REFRESH_TOKEN`, `ZOHO_ACCOUNT_ID`. Never commit real values.
+
+### GoDaddy cPanel (Setup Node.js App)
+
+This target is a cPanel shared/Business hosting plan, which runs Node apps via cPanel's **Setup Node.js App** tool (Phusion Passenger) rather than `next start` directly. Passenger needs a plain entry file — `server.js` at the project root — that listens on `process.env.PORT`; that's what to set as the app's "Application startup file".
+
+Without SSH/Terminal access, the production build has to happen locally and get uploaded, since cPanel's Node.js Selector only runs `npm install`, not `npm run build`:
+
+1. **Build locally**: `npm ci && npm run build` (requires Node ≥ 20.9.0 — confirm the cPanel Node.js Selector offers this version before proceeding).
+2. **Smoke-test the entry point** that Passenger will run: `NODE_ENV=production PORT=3001 node server.js`, then check a few routes at `http://localhost:3001`.
+3. **Upload** the project via cPanel File Manager or FTP — source files, `.next/`, `server.js`, `package.json`, `package-lock.json`, `public/` — excluding `node_modules/`, `.git/`, and any `.env*` files.
+4. **Create the app** in cPanel → *Setup Node.js App*: set the Node.js version, application mode to Production, application root to the uploaded directory, application URL to the target domain/subdomain, and application startup file to `server.js`.
+5. **Set environment variables** in the same tool's Environment Variables section (the 4 Zoho vars above).
+6. **Run NPM Install** from the cPanel UI to install dependencies from the uploaded `package.json`/`package-lock.json`.
+7. **Restart** the app from the Node.js Selector.
+
+TLS is handled by cPanel's AutoSSL once the domain resolves to the hosting account — no certbot/nginx involved.
+
+**Redeploying**: repeat the build-locally step, re-upload changed files (at least `.next/`), and Restart. Re-run "Run NPM Install" first if `package.json`/`package-lock.json` changed.
