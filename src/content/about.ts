@@ -23,6 +23,7 @@ export const autonomousOrchestration = {
     "Traditional organizations risk losing relevance and market share as born-digital competitors accelerate operational velocity. Defining a clear, future-ready business identity is the first step to survival in a volatile economy.",
     "We envision a future where financial blind spots are eliminated and operations adapt dynamically to market variations. Our roadmap establishes zero-touch, self-healing, and self-optimizing ecosystems as the standard for competitive enterprise operations.",
   ],
+  quote: "Defining a clear, future-ready business identity is the first step to survival in a volatile economy.",
   attribution: "AITEK",
 };
 
@@ -42,7 +43,7 @@ export const leadership = {
   heading: "Leadership Strategic Team (LST)",
   text: "Our executive team is composed of seasoned practitioners, authors, and advisors dedicated to positioning AITEK at the forefront of global IT. " +
         "We work directly with C-suite leaders to design, build, and scale autonomous operating models that drive real business outcomes. The team provides strategic and operational leadership across our consulting, engineering, and AI practices, setting the direction for the firm's transformation methodology. By bridging the gap between high-level management consulting and hands-on systems engineering, we ensure that digital investments are firmly aligned with measurable business outcomes. With deep expertise spanning global business strategy, enterprise architecture, and advanced Agentic AI systems design, we are dedicated to transforming traditional organizations into self-optimizing, intelligent operations.",
-  team: [],
+  team: [] as Array<{ name: string; title: string; bio: string; linkedin: string }>,
 };
 
 export const globalPresence = {
