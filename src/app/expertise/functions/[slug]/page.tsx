@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
 import PhotoHero from "@/components/ui/PhotoHero";
 import HookPageBody from "@/components/ui/HookPageBody";
-import CTABand from "@/components/ui/CTABand";
-import Button from "@/components/ui/Button";
 import { functionsCategory, getCategoryPage } from "@/content/expertise";
 import { functionImages } from "@/content/images";
 
@@ -50,11 +48,6 @@ export default async function FunctionDetailPage({
         </Container>
       </section>
 
-      <CTABand
-        heading="Explore the rest of Functions"
-        text="Intelligent Factory, Supply Chain Management, Manufacturing Excellence, Smart Operations, Digital Twins, and SAP."
-        cta={<Button href="/expertise/functions">View Functions</Button>}
-      />
     </>
   );
 }

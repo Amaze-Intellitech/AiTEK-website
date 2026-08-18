@@ -11,10 +11,15 @@ export default function Footer() {
       <Container className="py-14">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
           <div className="col-span-2 sm:col-span-1">
-            <div className="flex items-center gap-2">
-              <Image src="/images/aitek-logo.png" alt="" width={24} height={24} className="h-6 w-6" />
-              <span className="text-lg font-bold tracking-tight text-foreground">AITEK</span>
-            </div>
+            <Link href="/" className="inline-flex items-center">
+              <Image
+                src="/images/logo.jpeg"
+                alt="AITEK – Autonomous Enterprise"
+                width={120}
+                height={120}
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted">
               Architecting the Autonomous Enterprise.
             </p>

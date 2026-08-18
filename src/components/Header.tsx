@@ -107,9 +107,7 @@ export default function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <ThemeToggle />
-          <Link href="/book" className={navLinkClasses}>
-            Book a Call
-          </Link>
+
           <Link
             href="/contact"
             className="inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
@@ -179,25 +177,21 @@ export default function Header() {
                           ))}
                         </div>
                       ))}
-                      <Link
-                        href={item.href}
-                        className="block rounded-lg px-3 py-2 text-sm font-medium text-primary"
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        View all {item.label}
-                      </Link>
+                      {!item.hideViewAll && (
+                        <Link
+                          href={item.href}
+                          className="block rounded-lg px-3 py-2 text-sm font-medium text-primary"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          View all {item.label}
+                        </Link>
+                      )}
                     </div>
                   )}
                 </div>
               )
             )}
-            <Link
-              href="/book"
-              className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-foreground"
-              onClick={() => setMobileOpen(false)}
-            >
-              Book a Call
-            </Link>
+
             <div className="mt-2 flex items-center gap-3 px-3">
               <ThemeToggle />
               <span className="text-sm font-medium text-muted">Toggle theme</span>
@@ -276,11 +270,13 @@ function DesktopNavItem({
                 </div>
               ))}
             </div>
-            <div className="mt-5 border-t border-border pt-4">
-              <Link href={item.href} className="text-sm font-medium text-primary hover:underline">
-                View all {item.label} →
-              </Link>
-            </div>
+            {!item.hideViewAll && (
+              <div className="mt-5 border-t border-border pt-4">
+                <Link href={item.href} className="text-sm font-medium text-primary hover:underline">
+                  View all {item.label} →
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}

@@ -2,7 +2,7 @@ export const whoWeAre = {
   heading: "We Are AITEK – Strategy, Architecture, Intelligence, Execution",
   paragraphs: [
     "Traditional consulting firms deliver recommendations without build capabilities, while typical IT vendors write code without understanding strategic business context. This disconnect leaves organizations with fragmented, underperforming technology investments.",
-    "AITEK is a consulting-led, engineering-backed Digital and Agentic AI transformation partner. We operate like a mini-McKinsey + Accenture + OpenAI, integrating strategic advisory, enterprise-grade architecture, and advanced AI engineering into a single model.",
+    "AITEK is a consulting-led, engineering-backed Digital and Agentic AI transformation partner",
     "We help organizations modernise operations, transform decision-making, and build intelligent business systems that are scalable, autonomous, and future-ready. Our strategy-led approach connects strategic goals to actual engineering execution, delivering measurable value across your value chain.",
   ],
   capabilitiesHeading: "Key Capabilities",
@@ -23,8 +23,6 @@ export const autonomousOrchestration = {
     "Traditional organizations risk losing relevance and market share as born-digital competitors accelerate operational velocity. Defining a clear, future-ready business identity is the first step to survival in a volatile economy.",
     "We envision a future where financial blind spots are eliminated and operations adapt dynamically to market variations. Our roadmap establishes zero-touch, self-healing, and self-optimizing ecosystems as the standard for competitive enterprise operations.",
   ],
-  quote:
-    "We operate like a mini-McKinsey + Accenture + OpenAI, integrating strategic advisory, enterprise-grade architecture, and advanced AI engineering into a single model.",
   attribution: "AITEK",
 };
 
@@ -42,33 +40,9 @@ export const mission = {
 // placeholder (LeadershipCard) until headshots are supplied.
 export const leadership = {
   heading: "Leadership Strategic Team (LST)",
-  text: "Our executive team is composed of seasoned practitioners, authors, and advisors dedicated to positioning AITEK at the forefront of global IT. We work directly with C-suite leaders to design, build, and scale autonomous operating models that drive real business outcomes.",
-  team: [
-    {
-      name: "Dr. Hanumanth Rao",
-      title: "Managing Director",
-      bio: "Provides strategic and operational leadership across AITEK's consulting, engineering, and AI practices, setting the direction for the firm's transformation methodology.",
-      linkedin: "",
-    },
-    {
-      name: "Vijay Kumar",
-      title: "Chief Executive Officer",
-      bio: "Leads AITEK's global business strategy and client partnerships, driving the firm's mission to build autonomous, intelligent enterprises.",
-      linkedin: "",
-    },
-    {
-      name: "Ravindra Chebyam",
-      title: "Chief Technology Officer",
-      bio: "Oversees AITEK's technology vision and AI engineering capabilities, from enterprise architecture to agentic system design.",
-      linkedin: "",
-    },
-    {
-      name: "Chitti Jaya Chandra Shekhar",
-      title: "Chief Strategy Officer",
-      bio: "Shapes AITEK's transformation frameworks and go-to-market strategy, aligning digital investments with measurable business outcomes.",
-      linkedin: "",
-    },
-  ],
+  text: "Our executive team is composed of seasoned practitioners, authors, and advisors dedicated to positioning AITEK at the forefront of global IT. " +
+        "We work directly with C-suite leaders to design, build, and scale autonomous operating models that drive real business outcomes. The team provides strategic and operational leadership across our consulting, engineering, and AI practices, setting the direction for the firm's transformation methodology. By bridging the gap between high-level management consulting and hands-on systems engineering, we ensure that digital investments are firmly aligned with measurable business outcomes. With deep expertise spanning global business strategy, enterprise architecture, and advanced Agentic AI systems design, we are dedicated to transforming traditional organizations into self-optimizing, intelligent operations.",
+  team: [],
 };
 
 export const globalPresence = {

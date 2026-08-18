@@ -16,13 +16,14 @@ export interface NavGroup {
 
 export type NavItem =
   | { kind: "link"; label: string; href: string }
-  | { kind: "menu"; label: string; href: string; groups: NavGroup[] };
+  | { kind: "menu"; label: string; href: string; groups: NavGroup[]; hideViewAll?: boolean };
 
 export const mainNav: NavItem[] = [
   {
     kind: "menu",
     label: "Industries",
     href: "/industries",
+    hideViewAll: true,
     groups: [
       {
         links: industries.map((i) => ({ label: i.name, href: `/industries/${i.slug}` })),
